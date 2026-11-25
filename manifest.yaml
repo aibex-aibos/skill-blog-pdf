@@ -1,0 +1,9 @@
+name: skill-blog-pdf
+version: 0.1.0
+type: skill
+description: Wandelt einen Blog aus @Blog/ in ein druckfertiges PDF in @PDF/ um (macOS, Google Chrome)
+requires:
+  aibos: ">=0.7,<0.8"
+contents:
+  skills: [blog-pdf]
+license: Apache-2.0
