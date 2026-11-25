@@ -12,7 +12,7 @@ description: >
 
 Ein Blog `@Blog/NN Titel.md` wird zu `@PDF/NN Titel.pdf` (A4) im selben Projekt, mit derselben Nummer und demselben Titel. Das gilt auch für Essays und andere Texte in `@Blog/`. Das PDF zeigt die aktuelle Version des Blogs und überschreibt ein älteres PDF; frühere Fassungen bleiben in Git.
 
-**Werkzeug:** `blog_pdf.py` liegt im Ordner dieser `SKILL.md` (`<skill-ordner>`). Du rufst es mit absolutem Pfad auf, je als einzelnen Befehl:
+**Werkzeug:** `blog_pdf.py` liegt im Ordner dieser `SKILL.md`. `<skill-ordner>` ist dieser Ordner („Base directory for this skill“, nach dem Registrieren `<projekt>/.claude/skills/blog-pdf/`). Setze ihn in jedem Aufruf wörtlich als absoluten Pfad ein; er überlebt einen Aufruf nicht. Ruf das Werkzeug je als einzelnen Befehl auf:
 
 - `python3 -I "<skill-ordner>/blog_pdf.py" check`: prüft `/usr/bin/sips` und Google Chrome, eine Zeile `ok: …` bzw. `fehlt: …` je Voraussetzung; Exit-Code 0, wenn alles da ist, sonst 1.
 - `python3 -I "<skill-ordner>/blog_pdf.py" build "<blog.md>" "<image-dir>" "<out.pdf>"`: erzeugt das PDF und meldet zuletzt `geschrieben: <out.pdf>`; Exit-Code 0 bei Erfolg, 1 bei einem Fehler, 2 bei falschem Aufruf.
